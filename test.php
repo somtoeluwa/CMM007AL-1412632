@@ -7,6 +7,7 @@
  */
 
 echo "hello";
+echo "Webtest 1";
 
 
 ?>
