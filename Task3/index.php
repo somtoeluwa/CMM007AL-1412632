@@ -10,18 +10,18 @@
 <!-- Header Start-->
 <header>
 
-    <h1><a href="index.html" style="text-decoration:none"><strong>myBlog</strong></a></h1>
+    <h1><a href="index.php" style="text-decoration:none"><strong>myBlog</strong></a></h1>
     <h3>Because the Internet needs to know what I think</h3>
 
 
     <!-- Navigation bar Start-->
     <nav>
         <ul>
-            <li><a href="blog.html">All Blog Items</a></li>
-            <li><a href="blog.html">Work Items</a></li>
-            <li><a href="blog.html">University Items</a></li>
-            <li><a href="blog.html">Family Items</a></li>
-            <li><a href="add.html">Insert a Blog Item</a></li>
+            <li><a href="blog.php">All Blog Items</a></li>
+            <li><a href="blog.php?category=Work">Work Items</a></li>
+            <li><a href="blog.php?category=University">University Items</a></li>
+            <li><a href="blog.php?category=Family">Family Items</a></li>
+            <li><a href="add.php">Insert a Blog Item</a></li>
         </ul>
     </nav>
 </header>

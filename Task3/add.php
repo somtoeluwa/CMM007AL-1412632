@@ -1,3 +1,8 @@
+<?php
+include 'dbConnect.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,18 +16,18 @@
 <!-- Header Start-->
 <header>
 
-    <h1><a href="index.html">myBlog</a></h1>
+    <h1><a href="index.php">myBlog</a></h1>
     <h3>Because the Internet needs to know what I think</h3>
 
 
     <!-- Navigation bar Start-->
     <nav>
         <ul>
-            <li><a href="blog.html">All Blog Items</a></li>
-            <li><a href="blog.html">Work Items</a></li>
-            <li><a href="blog.html">University Items</a></li>
-            <li><a href="blog.html">Family Items</a></li>
-            <li><a href="add.html">Insert a Blog Item</a></li>
+            <li><a href="blog.php">All Blog Items</a></li>
+            <li><a href="blog.php?category=Work">Work Items</a></li>
+            <li><a href="blog.php?category=University">University Items</a></li>
+            <li><a href="blog.php?category=Family">Family Items</a></li>
+            <li><a href="add.php">Insert a Blog Item</a></li>
         </ul>
     </nav>
 </header>
@@ -36,9 +41,12 @@
         <div id="addForm" class="col-12">
 
             <!-- Form Start-->
+            <?php
+            if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+            // execute if requested using HTTP GET Method
+            ?>
 
-            <form class="inputBlog">
-
+            <form class="inputBlog" action = "<?{$_SERVER['PHP_SELF'];}?>" METHOD="post">
                 <label for="entryTitle">Entry Title:</label>
                 <input type="text" id="entryTitle" value="" required >
                 <br><br>
@@ -57,6 +65,25 @@
                 <br><br>
                 <input type="submit" value="submit">
             </form>
+
+            <?
+
+            }elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // execute if requested using HTTP POST Method
+                $entryTitle = $_POST["entryTitle"];
+                $entrySummary = $_POST["entrySummary"];
+                $category = $_POST["category"];
+                $submitter = $_POST["submitter"];
+                $sql = "INSERT INTO `blogView` ( `entryTitle`, `entrySummary`, `category`,`submitter`)
+            VALUES('$entryTitle',	'$entrySummary','$category', '$submitter') ";
+                $result = mysqli_query($db,$sql);
+                header('location: blog.php');
+            }
+            else{
+                header('location: index.php');
+            }
+            ?>
+
 
 
         </div>
