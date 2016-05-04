@@ -54,14 +54,14 @@ include 'dbConnect.php';
                 <textarea required id="entrySummary" name="entrySummary" cols="30" rows="5" value=""></textarea>
                 <br> <br>
                 <label for="category">Category:</label>
-                <select id="category" required>
+                <select id="category" name="category" required>
                     <option value="Work">Work</option>
                     <option value="University">University</option>
                     <option value="Family">Family</option>
                 </select>
                 <br> <br>
                 <label for="submitter">Submitted By:</label>
-                <input type="text" id="submitter" value="">
+                <input type="text" id="submitter" name="submitter" value="">
                 <br><br>
                 <input type="submit" value="submit">
             </form>
