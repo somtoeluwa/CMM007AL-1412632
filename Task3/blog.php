@@ -40,7 +40,7 @@ $category=$_GET['category'];
     <div class="row">
 
         <!-- Content Start-->
-        <div id="content" class="col-12">
+        <div id="content" class="col-12 col-m-12">
 
             <?php
             // $category=$_GET['BugCategory'];

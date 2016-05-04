@@ -38,7 +38,7 @@ include 'dbConnect.php';
 
     <div class="row">
 
-        <div id="addForm" class="col-12">
+        <div id="addForm" class="col-12 col-m-12">
 
             <!-- Form Start-->
             <?php
