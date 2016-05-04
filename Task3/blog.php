@@ -35,6 +35,7 @@ $category=$_GET['category'];
 
 <!-- Main Start-->
 <main>
+    <h1> My <?php echo $row['category'] ?></h1>
 
 
     <div class="row">
