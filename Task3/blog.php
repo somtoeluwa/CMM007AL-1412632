@@ -55,8 +55,8 @@ $category=$_GET['category'];
 
 
             <div id="blogItem">
-                <h3><?php echo $row['entryTitle'] ?><span> by </span><?php echo $row['submitter']?></h3>
-                <h5><?php echo $row['category'] ?></h5>
+                <h3><?php echo $row['entryTitle'] ?><span style="font-weight: 300"> by </span><?php echo $row['submitter']?></h3>
+                <h4><?php echo $row['category'] ?></h4>
                 <p><?php echo $row['entrySummary'] ?></p>
             </div>
 
