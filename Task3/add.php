@@ -48,10 +48,10 @@ include 'dbConnect.php';
 
             <form class="inputBlog" action = "<?{$_SERVER['PHP_SELF'];}?>" METHOD="post">
                 <label for="entryTitle">Entry Title:</label>
-                <input type="text" id="entryTitle" value="" required >
+                <input type="text" id="entryTitle" name="entryTitle" value="" required >
                 <br><br>
                 <label for="entrySummary">Entry Summary:</label>
-                <textarea required id="entrySummary" cols="30" rows="5" value=""></textarea>
+                <textarea required id="entrySummary" name="entrySummary" cols="30" rows="5" value=""></textarea>
                 <br> <br>
                 <label for="category">Category:</label>
                 <select id="category" required>
@@ -86,7 +86,7 @@ include 'dbConnect.php';
                 $submitter = test_input($_POST["submitter"]);
 
                 // mySql Query to insert values in to blogView Table
-                $sql = "INSERT INTO `blogView` ( entryTitle, entrySummary, category,submitter)
+                $sql = "INSERT INTO `blogview` ( entryTitle, entrySummary, category,submitter)
                         VALUES('{$entryTitle}',	'{$entrySummary}','{$category}', '{$submitter}') ";
 
                 //Process Query and send to database
