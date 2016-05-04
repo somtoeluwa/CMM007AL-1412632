@@ -109,7 +109,7 @@ body{
 }*/
 
 #blogItem{
-   /* border-bottom: 1px solid black; */
+   border-bottom: 1px solid black;
 }
 
 #blogImage{
@@ -160,7 +160,7 @@ body{
 
 /* Footer Styling*/
 footer{
-    border-top: 1px dashed black;
+
     clear: both;
     padding-left: 5px;
 }
