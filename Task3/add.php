@@ -80,13 +80,13 @@ include 'dbConnect.php';
                 }
 
 
-                $entryTitle = test_input($_POST["entryTitle"]);
-                $entrySummary = mysqli_real_escape_string($db, test_input($_POST["entrySummary"]));
-                $category = test_input($_POST["category"]);
-                $submitter = test_input($_POST["submitter"]);
+                $entryTitle = test_input($_POST['entryTitle']);
+                $entrySummary = mysqli_real_escape_string($db, test_input($_POST['entrySummary']));
+                $category = test_input($_POST['category']);
+                $submitter = test_input($_POST['submitter']);
 
                 // mySql Query to insert values in to blogView Table
-                $sql = "INSERT INTO `blogview` ( entryTitle, entrySummary, category,submitter)
+                $sql = "INSERT INTO `blogview` ( `entryTitle`, `entrySummary`, `category`,`submitter`)
                         VALUES('{$entryTitle}',	'{$entrySummary}','{$category}', '{$submitter}') ";
 
                 //Process Query and send to database
