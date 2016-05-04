@@ -70,14 +70,32 @@ include 'dbConnect.php';
 
             }elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // execute if requested using HTTP POST Method
-                $entryTitle = $_POST["entryTitle"];
-                $entrySummary = $_POST["entrySummary"];
-                $category = $_POST["category"];
-                $submitter = $_POST["submitter"];
+
+                // Function to test data and allow those with special characters inputted  to be posted
+                function test_input($data) {
+                    $data = trim($data);
+                    $data = stripslashes($data);
+                    $data = htmlspecialchars($data);
+                    return $data;
+                }
+
+
+                $entryTitle = test_input($_POST["entryTitle"]);
+                $entrySummary = mysqli_real_escape_string($db, test_input($_POST["entrySummary"]));
+                $category = test_input($_POST["category"]);
+                $submitter = test_input($_POST["submitter"]);
+
+                // mySql Query to insert values in to blogView Table
                 $sql = "INSERT INTO `blogView` ( `entryTitle`, `entrySummary`, `category`,`submitter`)
-            VALUES('$entryTitle',	'$entrySummary','$category', '$submitter') ";
+                        VALUES('$entryTitle',	'$entrySummary','$category', '$submitter') ";
+
+                //Process Query and send to database
                 $result = mysqli_query($db,$sql);
+
+                // When sucessful return to blog.php(Show all blog entries)
                 header('location: blog.php');
+
+
             }
             else{
                 header('location: index.php');
