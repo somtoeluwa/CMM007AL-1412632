@@ -86,7 +86,7 @@ include 'dbConnect.php';
                 $submitter = test_input($_POST["submitter"]);
 
                 // mySql Query to insert values in to blogView Table
-                $sql = "INSERT INTO `blogView` ( `entryTitle`, `entrySummary`, `category`,`submitter`)
+                $sql = "INSERT INTO `blogView` ( entryTitle, entrySummary, category,submitter)
                         VALUES('$entryTitle',	'$entrySummary','$category', '$submitter') ";
 
                 //Process Query and send to database
