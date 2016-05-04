@@ -145,27 +145,27 @@ body{
 .inputBlog label{
     text-align: center;
     position: absolute;
-    left: 40%;
+    left:-30%;
 
 }
 
 .inputBlog input[type=text]{
-    margin-left: 15em;
+    margin-left: 35%;
     width: 250px;
+
 
 }
 
 .inputBlog ,textarea
 {
     width: 250px;
-    margin-left: 15em;
+    margin-left: 35%;
+    position: relative;
 }
 .inputBlog input[type=submit]{
-    margin-left: 29.7em;
-}
+    margin-left: 35%;}
 .inputBlog select{
-    margin-left: 15em;
-}
+    margin-left: 35%;}
 
 
 /* Font Styling*/
