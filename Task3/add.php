@@ -46,7 +46,7 @@ include 'dbConnect.php';
             // execute if requested using HTTP GET Method
             ?>
 
-            <form class="inputBlog" action = "test.php" METHOD="post">
+            <form class="inputBlog" action = "<?{$_SERVER['PHP_SELF'];}?>" METHOD="post">
                 <label for="entryTitle">Entry Title:</label>
                 <input type="text" id="entryTitle" value="" required >
                 <br><br>
