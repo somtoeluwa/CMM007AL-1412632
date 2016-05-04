@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+}
+
+/* All the columns should be floating left and pading of 15px */
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+/* REMEMBER EACH COLUMN SHOULD BE WRAPED IN A DIV
+   AND NUMBER OF COLUMNS SHOULD ADD UP TO 12 I.E
+   100%/12 = 8.33% WIDTH*/
+
+/* clear elements from being placed ontop of columns*/
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* @media breakpoint for mobile responsive view setting break point to 500px*/
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 500px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+/* End of Responsive Web Columns*/
+
+
+/*Start of page styling*/
+
+/*Header Styling*/
+
+header h3{
+    margin-top: -15px;
+}
+
+
+/*Navbar Styling*/
+nav{
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+    overflow: hidden;
+
+}
+nav li{
+    float: left;
+}
+
+nav li a{
+    display:inline-block;
+    padding:10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    background-color: grey;
+    margin-right: 10px;
+}
+
+/* Body Styling*/
+
+body{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Content Styling*/
+
+/*#content{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    height: auto;
+}*/
+
+#blogItem{
+    border-bottom: 1px solid black;
+}
+
+#blogImage{
+    width: 100%
+}
+
+/* Form Styling*/
+.inputBlog{
+
+    margin-left: 15%;
+    padding-top: 2%;
+}
+.inputBlog label{
+    text-align: center;
+
+}
+
+.inputBlog input[type=text]{
+    margin-left: 10em;
+    width: 250px;
+
+}
+
+.inputBlog ,textarea
+{
+    width: 250px;
+    margin-left: 10em;
+}
+.inputBlog input[type=submit]{
+    margin-left: 24.5em;
+}
+.inputBlog select{
+    margin-left: 10em;
+}
+
+
+/* Font Styling*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/* Footer Styling*/
+footer{
+    border-top: 1px dashed black;
+    clear: both;
+    padding-left: 5px;
+}

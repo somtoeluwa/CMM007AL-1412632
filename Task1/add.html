@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert a Blog Item</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<!-- Header Start-->
+<header>
+
+    <h1><a href="index.html">myBlog</a></h1>
+    <h3>Because the Internet needs to know what I think</h3>
+
+
+    <!-- Navigation bar Start-->
+    <nav>
+        <ul>
+            <li><a href="blog.html">All Blog Items</a></li>
+            <li><a href="blog.html">Work Items</a></li>
+            <li><a href="blog.html">University Items</a></li>
+            <li><a href="blog.html">Family Items</a></li>
+            <li><a href="add.html">Insert a Blog Item</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Main Start-->
+<main>
+
+
+    <div class="row">
+
+        <div id="addForm" class="col-12">
+
+            <!-- Form Start-->
+
+            <form class="inputBlog">
+
+                <label for="entryTitle">Bug Name</label>
+                <input type="text" id="entryTitle" value="" required >
+                <br><br>
+                <label for="entrySummary">Bug Summary</label>
+                <textarea required id="entrySummary" cols="30" rows="5" value=""></textarea>
+                <br> <br>
+                <label for="category">Bug Category</label>
+                <select id="category" required>
+                    <option value="Politics">Politics</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Technology">Technology</option>
+                </select>
+                <br> <br>
+                <label for="submitter">Bug Name</label>
+                <input type="text" id="submitter" value="">
+                <br><br>
+                <input type="submit" value="submit">
+            </form>
+
+
+        </div>
+
+
+    </div>
+</main>
+<!-- footer Start-->
+<footer>
+    <p>Designed by [Somto Eluwa, 1412632] [2016]</p>
+
+</footer>
+
+
+</body>
+</html>
