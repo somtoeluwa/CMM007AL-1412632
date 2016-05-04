@@ -46,7 +46,7 @@ include 'dbConnect.php';
             // execute if requested using HTTP GET Method
             ?>
 
-            <form class="inputBlog" action = "<?{$_SERVER['PHP_SELF'];}?>" METHOD="post">
+            <form class="inputBlog" action = "test.php" METHOD="post">
                 <label for="entryTitle">Entry Title:</label>
                 <input type="text" id="entryTitle" value="" required >
                 <br><br>
@@ -87,15 +87,15 @@ include 'dbConnect.php';
 
                 // mySql Query to insert values in to blogView Table
                 $sql = "INSERT INTO `blogView` ( entryTitle, entrySummary, category,submitter)
-                        VALUES('$entryTitle',	'$entrySummary','$category', '$submitter') ";
+                        VALUES('{$entryTitle}',	'{$entrySummary}','{$category}', '{$submitter}') ";
 
                 //Process Query and send to database
-                $result = mysqli_query($db,$sql);
-
-                // When sucessful return to blog.php(Show all blog entries)
-                header('location: blog.php');
-
-
+                if($result = mysqli_query($db,$sql)){
+                    // When sucessful return to blog.php(Show all blog entries)
+                    header('location: blog.php');
+                }else {
+                    header("Location:index.php");
+                }
             }
             else{
                 header('location: index.php');
