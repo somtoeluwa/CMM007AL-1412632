@@ -8,9 +8,9 @@ SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 DROP TABLE IF EXISTS `blogview`;
 CREATE TABLE `blogview` (
   `blogItemID` int(11) NOT NULL AUTO_INCREMENT,
-  `entryTitle` varchar(100) DEFAULT NULL,
-  `entrySummary` varchar(300) DEFAULT NULL,
-  `category` varchar(100) DEFAULT NULL,
+  `entryTitle` varchar(100) NOT NULL,
+  `entrySummary` varchar(300) NOT NULL,
+  `category` varchar(100) NOT NULL,
   `submitter` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`blogItemID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
